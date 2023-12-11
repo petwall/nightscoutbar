@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E19FB8C62B276086003EF228 /* nightscoutbarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8C52B276086003EF228 /* nightscoutbarApp.swift */; };
+		E19FB8C82B276086003EF228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8C72B276086003EF228 /* ContentView.swift */; };
+		E19FB8CA2B276092003EF228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19FB8C92B276092003EF228 /* Assets.xcassets */; };
+		E19FB8CD2B276093003EF228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19FB8CC2B276093003EF228 /* Preview Assets.xcassets */; };
+		E19FB8D82B276094003EF228 /* nightscoutbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8D72B276094003EF228 /* nightscoutbarTests.swift */; };
+		E19FB8E22B276094003EF228 /* nightscoutbarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8E12B276094003EF228 /* nightscoutbarUITests.swift */; };
+		E19FB8E42B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8E32B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E19FB8D42B276094003EF228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E19FB8BA2B276086003EF228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E19FB8C12B276086003EF228;
+			remoteInfo = nightscoutbar;
+		};
+		E19FB8DE2B276094003EF228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E19FB8BA2B276086003EF228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E19FB8C12B276086003EF228;
+			remoteInfo = nightscoutbar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E19FB8C22B276086003EF228 /* nightscoutbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nightscoutbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19FB8C52B276086003EF228 /* nightscoutbarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarApp.swift; sourceTree = "<group>"; };
+		E19FB8C72B276086003EF228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E19FB8C92B276092003EF228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E19FB8CC2B276093003EF228 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E19FB8CE2B276093003EF228 /* nightscoutbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nightscoutbar.entitlements; sourceTree = "<group>"; };
+		E19FB8D32B276094003EF228 /* nightscoutbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nightscoutbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19FB8D72B276094003EF228 /* nightscoutbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarTests.swift; sourceTree = "<group>"; };
+		E19FB8DD2B276094003EF228 /* nightscoutbarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nightscoutbarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19FB8E12B276094003EF228 /* nightscoutbarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarUITests.swift; sourceTree = "<group>"; };
+		E19FB8E32B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E19FB8BF2B276086003EF228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19FB8D02B276094003EF228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19FB8DA2B276094003EF228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E19FB8B92B276086003EF228 = {
+			isa = PBXGroup;
+			children = (
+				E19FB8C42B276086003EF228 /* nightscoutbar */,
+				E19FB8D62B276094003EF228 /* nightscoutbarTests */,
+				E19FB8E02B276094003EF228 /* nightscoutbarUITests */,
+				E19FB8C32B276086003EF228 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E19FB8C32B276086003EF228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E19FB8C22B276086003EF228 /* nightscoutbar.app */,
+				E19FB8D32B276094003EF228 /* nightscoutbarTests.xctest */,
+				E19FB8DD2B276094003EF228 /* nightscoutbarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E19FB8C42B276086003EF228 /* nightscoutbar */ = {
+			isa = PBXGroup;
+			children = (
+				E19FB8C52B276086003EF228 /* nightscoutbarApp.swift */,
+				E19FB8C72B276086003EF228 /* ContentView.swift */,
+				E19FB8C92B276092003EF228 /* Assets.xcassets */,
+				E19FB8CE2B276093003EF228 /* nightscoutbar.entitlements */,
+				E19FB8CB2B276093003EF228 /* Preview Content */,
+			);
+			path = nightscoutbar;
+			sourceTree = "<group>";
+		};
+		E19FB8CB2B276093003EF228 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E19FB8CC2B276093003EF228 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E19FB8D62B276094003EF228 /* nightscoutbarTests */ = {
+			isa = PBXGroup;
+			children = (
+				E19FB8D72B276094003EF228 /* nightscoutbarTests.swift */,
+			);
+			path = nightscoutbarTests;
+			sourceTree = "<group>";
+		};
+		E19FB8E02B276094003EF228 /* nightscoutbarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E19FB8E12B276094003EF228 /* nightscoutbarUITests.swift */,
+				E19FB8E32B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift */,
+			);
+			path = nightscoutbarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E19FB8C12B276086003EF228 /* nightscoutbar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E19FB8E72B276094003EF228 /* Build configuration list for PBXNativeTarget "nightscoutbar" */;
+			buildPhases = (
+				E19FB8BE2B276086003EF228 /* Sources */,
+				E19FB8BF2B276086003EF228 /* Frameworks */,
+				E19FB8C02B276086003EF228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nightscoutbar;
+			productName = nightscoutbar;
+			productReference = E19FB8C22B276086003EF228 /* nightscoutbar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E19FB8D22B276094003EF228 /* nightscoutbarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E19FB8EA2B276094003EF228 /* Build configuration list for PBXNativeTarget "nightscoutbarTests" */;
+			buildPhases = (
+				E19FB8CF2B276094003EF228 /* Sources */,
+				E19FB8D02B276094003EF228 /* Frameworks */,
+				E19FB8D12B276094003EF228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E19FB8D52B276094003EF228 /* PBXTargetDependency */,
+			);
+			name = nightscoutbarTests;
+			productName = nightscoutbarTests;
+			productReference = E19FB8D32B276094003EF228 /* nightscoutbarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E19FB8DC2B276094003EF228 /* nightscoutbarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E19FB8ED2B276094003EF228 /* Build configuration list for PBXNativeTarget "nightscoutbarUITests" */;
+			buildPhases = (
+				E19FB8D92B276094003EF228 /* Sources */,
+				E19FB8DA2B276094003EF228 /* Frameworks */,
+				E19FB8DB2B276094003EF228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E19FB8DF2B276094003EF228 /* PBXTargetDependency */,
+			);
+			name = nightscoutbarUITests;
+			productName = nightscoutbarUITests;
+			productReference = E19FB8DD2B276094003EF228 /* nightscoutbarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E19FB8BA2B276086003EF228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E19FB8C12B276086003EF228 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					E19FB8D22B276094003EF228 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = E19FB8C12B276086003EF228;
+					};
+					E19FB8DC2B276094003EF228 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = E19FB8C12B276086003EF228;
+					};
+				};
+			};
+			buildConfigurationList = E19FB8BD2B276086003EF228 /* Build configuration list for PBXProject "nightscoutbar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E19FB8B92B276086003EF228;
+			productRefGroup = E19FB8C32B276086003EF228 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E19FB8C12B276086003EF228 /* nightscoutbar */,
+				E19FB8D22B276094003EF228 /* nightscoutbarTests */,
+				E19FB8DC2B276094003EF228 /* nightscoutbarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E19FB8C02B276086003EF228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19FB8CD2B276093003EF228 /* Preview Assets.xcassets in Resources */,
+				E19FB8CA2B276092003EF228 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19FB8D12B276094003EF228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19FB8DB2B276094003EF228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E19FB8BE2B276086003EF228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19FB8C82B276086003EF228 /* ContentView.swift in Sources */,
+				E19FB8C62B276086003EF228 /* nightscoutbarApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19FB8CF2B276094003EF228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19FB8D82B276094003EF228 /* nightscoutbarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19FB8D92B276094003EF228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19FB8E42B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift in Sources */,
+				E19FB8E22B276094003EF228 /* nightscoutbarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E19FB8D52B276094003EF228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E19FB8C12B276086003EF228 /* nightscoutbar */;
+			targetProxy = E19FB8D42B276094003EF228 /* PBXContainerItemProxy */;
+		};
+		E19FB8DF2B276094003EF228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E19FB8C12B276086003EF228 /* nightscoutbar */;
+			targetProxy = E19FB8DE2B276094003EF228 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E19FB8E52B276094003EF228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E19FB8E62B276094003EF228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E19FB8E82B276094003EF228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = nightscoutbar/nightscoutbar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"nightscoutbar/Preview Content\"";
+				DEVELOPMENT_TEAM = SD3UZ8UU78;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.wallman.nightscoutbar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E19FB8E92B276094003EF228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = nightscoutbar/nightscoutbar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"nightscoutbar/Preview Content\"";
+				DEVELOPMENT_TEAM = SD3UZ8UU78;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.wallman.nightscoutbar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E19FB8EB2B276094003EF228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SD3UZ8UU78;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.wallman.nightscoutbarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nightscoutbar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/nightscoutbar";
+			};
+			name = Debug;
+		};
+		E19FB8EC2B276094003EF228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SD3UZ8UU78;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.wallman.nightscoutbarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nightscoutbar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/nightscoutbar";
+			};
+			name = Release;
+		};
+		E19FB8EE2B276094003EF228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SD3UZ8UU78;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.wallman.nightscoutbarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = nightscoutbar;
+			};
+			name = Debug;
+		};
+		E19FB8EF2B276094003EF228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SD3UZ8UU78;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.wallman.nightscoutbarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = nightscoutbar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E19FB8BD2B276086003EF228 /* Build configuration list for PBXProject "nightscoutbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19FB8E52B276094003EF228 /* Debug */,
+				E19FB8E62B276094003EF228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E19FB8E72B276094003EF228 /* Build configuration list for PBXNativeTarget "nightscoutbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19FB8E82B276094003EF228 /* Debug */,
+				E19FB8E92B276094003EF228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E19FB8EA2B276094003EF228 /* Build configuration list for PBXNativeTarget "nightscoutbarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19FB8EB2B276094003EF228 /* Debug */,
+				E19FB8EC2B276094003EF228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E19FB8ED2B276094003EF228 /* Build configuration list for PBXNativeTarget "nightscoutbarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19FB8EE2B276094003EF228 /* Debug */,
+				E19FB8EF2B276094003EF228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E19FB8BA2B276086003EF228 /* Project object */;
+}
