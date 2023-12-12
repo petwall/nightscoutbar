@@ -14,8 +14,6 @@ struct NightscoutBarApp: App {
 
     var body: some Scene {
         Settings {
-            // Define your settings view here
-            // This is optional if you are handling everything in the AppDelegate
         }
     }
 }
@@ -29,12 +27,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         // Create the status bar item
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
-        // Set the initial text or image for the status bar item
-        if let button = statusBarItem.button {
-            button.title = "Nightscout"
-//            button.action = #selector(statusBarButtonClicked(_:))
-        }
-
         // Create a new menu
         let statusBarMenu = NSMenu(title: "Status Bar Menu")
 
@@ -56,19 +48,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         nightscoutViewModel.startFetching()
 
         // Observe any changes in the NightscoutViewModel
-           nightscoutViewModel.objectWillChange.sink { [weak self] _ in
-               // Update the status bar whenever there is a change in the ViewModel
-               self?.updateStatusBar()
-           }.store(in: &cancellables)
+        nightscoutViewModel.objectWillChange.sink { [weak self] _ in
+            // Update the status bar whenever there is a change in the ViewModel
+            self?.updateStatusBar()
+        }.store(in: &cancellables)
     }
 
     func updateStatusBar() {
-        let valueString = nightscoutViewModel.useMmol ? String(format: "%.1f", nightscoutViewModel.glucoseValue) : "\(Int(nightscoutViewModel.glucoseValue))"
-        let withArrow = valueString + " " + nightscoutViewModel.direction
+        var valueString = nightscoutViewModel.useMmol ? String(format: "%.1f", nightscoutViewModel.glucoseValue) : "\(Int(nightscoutViewModel.glucoseValue))"
+        valueString += " " + nightscoutViewModel.direction
+        valueString += nightscoutViewModel.lastTimeStamp
 
         if let button = statusBarItem.button {
             DispatchQueue.main.async {
-                button.title = withArrow
+                button.title = valueString
             }
         }
     }
@@ -80,9 +73,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     }
 
     @objc func openSettings() {
-        // Check if the settings window already exists
         if settingsWindow == nil {
-            // Create the settings window if it does not exist
             settingsWindow = NSWindow(
                 contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
                 styleMask: [.titled, .closable, .miniaturizable, .resizable],
@@ -99,5 +90,3 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         NSApp.activate(ignoringOtherApps: true)
     }
 }
-
-

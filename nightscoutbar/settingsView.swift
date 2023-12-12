@@ -23,8 +23,7 @@ struct SettingsView: View {
 
     func saveAndTest() {
         saveToUserDefaults()
-
-        // test a request and update status field
+        // test a request with current settings
         viewModel.fetchData()
     }
     
@@ -67,24 +66,23 @@ struct SettingsView: View {
                     .cornerRadius(8)
                 }
                 TextEditor(text: $viewModel.connectionResult)
-                    .padding(4) // Add padding to prevent text from being cut off
+                    .padding(4)
                     .background(
-                        RoundedRectangle(cornerRadius: 8, style: .continuous) // Rounded background
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
                             .fill(Color.gray)
                     )
                     .scrollContentBackground(.hidden)
-                    .frame(height: 100) // Adjust the height to match the background
+                    .frame(height: 100)
                     .background(Color.gray)
-//                    .disabled(true)
                     .cornerRadius(8)
-                    .border(backgroundColor(for: viewModel.connectionStatus), width: 2)
+                    .border(statusColor(for: viewModel.connectionStatus), width: 2)
             }
         }
         .padding()
         .frame(width: 400)
     }
     
-    private func backgroundColor(for connectionStatus: NightscoutViewModel.ConnectionStatus) -> Color {
+    private func statusColor(for connectionStatus: NightscoutViewModel.ConnectionStatus) -> Color {
         switch connectionStatus {
         case NightscoutViewModel.ConnectionStatus.ok:
             return .green
