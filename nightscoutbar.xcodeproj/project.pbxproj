@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E19FB8C62B276086003EF228 /* nightscoutbarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8C52B276086003EF228 /* nightscoutbarApp.swift */; };
-		E19FB8C82B276086003EF228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8C72B276086003EF228 /* ContentView.swift */; };
 		E19FB8CA2B276092003EF228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19FB8C92B276092003EF228 /* Assets.xcassets */; };
 		E19FB8CD2B276093003EF228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19FB8CC2B276093003EF228 /* Preview Assets.xcassets */; };
 		E19FB8D82B276094003EF228 /* nightscoutbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8D72B276094003EF228 /* nightscoutbarTests.swift */; };
 		E19FB8E22B276094003EF228 /* nightscoutbarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8E12B276094003EF228 /* nightscoutbarUITests.swift */; };
 		E19FB8E42B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8E32B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift */; };
+		E19FB8F32B2774B5003EF228 /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8F22B2774B5003EF228 /* settingsView.swift */; };
+		E19FB8F52B277AB2003EF228 /* nightscoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FB8F42B277AB1003EF228 /* nightscoutViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		E19FB8C22B276086003EF228 /* nightscoutbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nightscoutbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19FB8C52B276086003EF228 /* nightscoutbarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarApp.swift; sourceTree = "<group>"; };
-		E19FB8C72B276086003EF228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E19FB8C92B276092003EF228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E19FB8CC2B276093003EF228 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E19FB8CE2B276093003EF228 /* nightscoutbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nightscoutbar.entitlements; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		E19FB8DD2B276094003EF228 /* nightscoutbarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nightscoutbarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19FB8E12B276094003EF228 /* nightscoutbarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarUITests.swift; sourceTree = "<group>"; };
 		E19FB8E32B276094003EF228 /* nightscoutbarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutbarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E19FB8F22B2774B5003EF228 /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
+		E19FB8F42B277AB1003EF228 /* nightscoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightscoutViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				E19FB8C52B276086003EF228 /* nightscoutbarApp.swift */,
-				E19FB8C72B276086003EF228 /* ContentView.swift */,
+				E19FB8F22B2774B5003EF228 /* settingsView.swift */,
+				E19FB8F42B277AB1003EF228 /* nightscoutViewModel.swift */,
 				E19FB8C92B276092003EF228 /* Assets.xcassets */,
 				E19FB8CE2B276093003EF228 /* nightscoutbar.entitlements */,
 				E19FB8CB2B276093003EF228 /* Preview Content */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E19FB8C82B276086003EF228 /* ContentView.swift in Sources */,
+				E19FB8F52B277AB2003EF228 /* nightscoutViewModel.swift in Sources */,
 				E19FB8C62B276086003EF228 /* nightscoutbarApp.swift in Sources */,
+				E19FB8F32B2774B5003EF228 /* settingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = nightscoutbar/nightscoutbar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -429,6 +434,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Nightscoutbar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = nightscoutbar/nightscoutbar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -456,6 +465,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Nightscoutbar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

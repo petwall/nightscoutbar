@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>nightscoutbar debug.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>nightscoutbar.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E19FB8C12B276086003EF228</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E19FB8D22B276094003EF228</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E19FB8DC2B276094003EF228</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
