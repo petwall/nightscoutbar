@@ -12,6 +12,7 @@ struct SettingsView: View {
     @State private var serverURL: String = UserDefaults.standard.string(forKey: "ServerURL") ?? ""
     @State private var apiSecret: String = UserDefaults.standard.string(forKey: "APISecret") ?? ""
     @State private var showValuesInMmol: Bool = UserDefaults.standard.bool(forKey: "ShowValuesInMmol")
+    @State private var serverInMmol: Bool = UserDefaults.standard.bool(forKey: "ServerInMmol")
 
     // This function saves the values to UserDefaults
     func saveToUserDefaults() {
@@ -19,6 +20,7 @@ struct SettingsView: View {
         defaults.set(serverURL, forKey: "ServerURL")
         defaults.set(apiSecret, forKey: "APISecret")
         defaults.set(showValuesInMmol, forKey: "ShowValuesInMmol")
+        defaults.set(serverInMmol, forKey: "ServerInMmol")
     }
 
     func saveAndTest() {
@@ -48,8 +50,14 @@ struct SettingsView: View {
                 SecureField("Enter API Secret", text: $apiSecret)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                Toggle(isOn: $showValuesInMmol) {
-                    Text("Show values in mmol")
+                HStack(spacing: 20) {
+                    Toggle(isOn: $showValuesInMmol) {
+                        Text("Use mmol")
+                    }
+                    Toggle(isOn: $serverInMmol) {
+                        Text("Server is set to mmol")
+                    }
+
                 }
                 HStack(spacing: 20) {
                     Button(action: saveAndTest) {
@@ -71,7 +79,7 @@ struct SettingsView: View {
                         RoundedRectangle(cornerRadius: 8, style: .continuous)
                             .fill(Color.gray)
                     )
-                    .scrollContentBackground(.hidden)
+            //        .scrollContentBackground(.hidden)
                     .frame(height: 100)
                     .background(Color.gray)
                     .cornerRadius(8)

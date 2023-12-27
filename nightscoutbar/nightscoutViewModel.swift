@@ -15,7 +15,20 @@ class NightscoutViewModel: ObservableObject {
     @Published var lastTimeStamp: String = ""
     @Published var connectionStatus: ConnectionStatus = ConnectionStatus.empty
     @Published var connectionResult: String = "Server connection status..."
+    @Published var currentBackend: BackendType = BackendType.nightscout
     private var timer: Timer?
+    
+    struct NightscoutEntry: Decodable {
+        let sgv: Double
+        let direction: String? // sometimes there is no direction data in the json object
+        let dateString: String
+    }
+
+    //  TODO: add support to connect to Dexcom share...
+    enum BackendType {
+        case nightscout
+        case dexcom
+    }
     
     enum ConnectionStatus {
         case empty
@@ -34,11 +47,15 @@ class NightscoutViewModel: ObservableObject {
     var useMmol: Bool {
         UserDefaults.standard.bool(forKey: "ShowValuesInMmol")
     }
-
+    
+    var serverInMmol: Bool {
+        UserDefaults.standard.bool(forKey: "ServerInMmol")
+    }
+    
     func startFetching() {
         // Execute the network request immediately
         fetchData()
-
+        
         // Then set up a timer to fetch data every 30 seconds
         timer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] _ in
             self?.fetchData()
@@ -49,7 +66,7 @@ class NightscoutViewModel: ObservableObject {
         timer?.invalidate()
         timer = nil
     }
-
+    
     func fetchData() {
         var components = URLComponents(string: baseURL)
         components?.path = "/api/v1/entries.json"  // Append the endpoint path
@@ -110,43 +127,57 @@ class NightscoutViewModel: ObservableObject {
                 self.connectionResult += "Raw Response Data: \(String(data: data, encoding: .utf8) ?? "Invalid response data")\n"
             }
             print("Raw Response Data: \(String(data: data, encoding: .utf8) ?? "Invalid response data")\n")
-            // Attempt to parse the data
+            
+            // Parse the json data
             do {
                 let entries = try JSONDecoder().decode([NightscoutEntry].self, from: data)
                 if let entry = entries.first {
                     DispatchQueue.main.async {
                         if self.useMmol {
-                            self.glucoseValue = Double(entry.sgv) / 18.0
+                            if self.serverInMmol {
+                                self.glucoseValue = Double(entry.sgv)
+                            } else {
+                                self.glucoseValue = Double(entry.sgv) / 18.0
+                            }
                         } else {
-                            self.glucoseValue = Double(entry.sgv)
+                            if self.serverInMmol {
+                                self.glucoseValue = Double(entry.sgv) * 18.0
+                            } else {
+                                self.glucoseValue = Double(entry.sgv)
+                            }
                         }
-                        self.direction = self.arrow(for: entry.direction)
+                        
+                        // sometimes there is no 'direction' entry in the json data, fallback to '?'
+                        if let direction = entry.direction {
+                            self.direction = self.arrow(for: direction)
+                        } else {
+                            self.direction = "?"
+                        }
                         
                         let isoFormatter = ISO8601DateFormatter()
                         isoFormatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
                         
                         if let serverTimeStamp = isoFormatter.date(from: entry.dateString) {
-                            let clientTimeStamp = Date() // Use current Date object directly
-
-                            // Calculate the time difference in seconds
+                            let clientTimeStamp = Date()
+                            
+                            // Calculate the time difference from current time to last recorded value in seconds
                             let timeDifference = abs(serverTimeStamp.timeIntervalSince(clientTimeStamp))
                             
-                            if timeDifference > 360 { // 360 seconds = 6 minutes
+                            if timeDifference > 360 { // 6 minutes
                                 let dateFormatter = DateFormatter()
                                 dateFormatter.dateFormat = "HH:mm"
-                                dateFormatter.timeZone = TimeZone.current
-                                // Format the serverTimeStamp in the client's time zone
+                                dateFormatter.timeZone = TimeZone.current // format the serverTimeStamp in the client's time zone
                                 let formattedServerTime = dateFormatter.string(from: serverTimeStamp)
-
-                                self.lastTimeStamp = "[" + formattedServerTime + "]"
+                                
+                                self.lastTimeStamp = " [" + formattedServerTime + "]"
                             } else {
                                 self.lastTimeStamp = ""
                             }
                         } else {
-                            self.connectionResult += "Coundl't read dateString - invalid format\n"
+                            self.connectionResult += "Could not read dateString - invalid format\n"
                         }
-                    // sync variable changes to update the statusbar
-                    self.objectWillChange.send()
+                        // sync variable changes to update the statusbar
+                        self.objectWillChange.send()
                     }
                 } else {
                     DispatchQueue.main.async {
@@ -181,11 +212,5 @@ class NightscoutViewModel: ObservableObject {
         
         // Handle nil and represent that as '?'
         return direction.flatMap { arrows[$0] } ?? "?"
-    }
-    
-    struct NightscoutEntry: Decodable {
-        let sgv: Double
-        let direction: String
-        let dateString: String
     }
 }
