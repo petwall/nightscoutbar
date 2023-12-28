@@ -6,4 +6,4 @@ If the fetched value is older than 6 minutes, the timestamp of the last known va
 
 Has a simple settings view that also shows current server response and green/red status if everything works.
 
-![image](https://github.com/petwall/nightscoutbar/assets/3836435/2226ec16-6838-4e07-a6ba-03ebef0b93cc)
+![image](https://github.com/petwall/nightscoutbar/assets/3836435/0b024ab5-f5b8-4711-8911-0d317a060482)
