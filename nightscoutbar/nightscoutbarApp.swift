@@ -8,6 +8,9 @@
 import SwiftUI
 import Combine
 
+
+let mmolToMgdlConstant: Double = 18.018018018
+
 @main
 struct NightscoutBarApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate

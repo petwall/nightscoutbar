@@ -137,11 +137,11 @@ class NightscoutViewModel: ObservableObject {
                             if self.serverInMmol {
                                 self.glucoseValue = Double(entry.sgv)
                             } else {
-                                self.glucoseValue = Double(entry.sgv) / 18.0
+                                self.glucoseValue = Double(entry.sgv) / mmolToMgdlConstant
                             }
                         } else {
                             if self.serverInMmol {
-                                self.glucoseValue = Double(entry.sgv) * 18.0
+                                self.glucoseValue = Double(entry.sgv) * mmolToMgdlConstant
                             } else {
                                 self.glucoseValue = Double(entry.sgv)
                             }
