@@ -1,3 +1,7 @@
 # Xcode
 xcuserdata/
 project.xcworkspace/xcuserdata/
+buildserver.json
+
+# nvim debug
+.nvim/
